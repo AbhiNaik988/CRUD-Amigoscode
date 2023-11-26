@@ -24,4 +24,8 @@ public class StudentService {
     public Boolean addStudent(Student student){
         return this.studentDao.createStudent(student);
     }
+
+    public Boolean deleteStudent(Integer id){
+        return this.studentDao.deleteStudent(id);
+    }
 }

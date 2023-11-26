@@ -28,4 +28,13 @@ public class StudentdaoImpl implements StudentDao {
         Student newStudent = this.studentRepository.save(student);
         return newStudent != null ? true : false;
     }
+
+    @Override
+    public boolean deleteStudent(Integer studentId) {
+        boolean isStudentExists = this.studentRepository.existsById(studentId);
+        if(isStudentExists){
+            this.studentRepository.deleteById(studentId);
+        }
+        return isStudentExists;
+    }
 }

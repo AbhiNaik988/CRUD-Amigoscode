@@ -8,4 +8,6 @@ public interface StudentDao {
     public List<Student> getAllStudents();
 
     public boolean createStudent(Student student);
+
+    public boolean deleteStudent(Integer studentId);
 }

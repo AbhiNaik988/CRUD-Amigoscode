@@ -29,4 +29,9 @@ public class StudentController {
     public ResponseEntity<Boolean> addStudent(@RequestBody Student student){
         return new ResponseEntity<>(this.studentService.addStudent(student),HttpStatus.CREATED);
     }
+
+    @DeleteMapping("delete")
+    public ResponseEntity<Boolean> deleteStudent(@RequestParam Integer id){
+        return new ResponseEntity<>(this.studentService.deleteStudent(id),HttpStatus.OK);
+    }
 }

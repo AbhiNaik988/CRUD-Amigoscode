@@ -15,9 +15,9 @@ public class InsertInitialStudents {
     CommandLineRunner commandLineRunner(StudentRepository repository){
         return args -> {
             repository.saveAll(List.of(
-                            new Student(1,"abhi",22,"abhinaik988@gmail.com"),
-                            new Student(2,"abhay",22,"abhaynaik988@gmail.com"),
-                            new Student(3,"dev",21,"devnaik988@gmail.com"))
+                            Student.builder().name("Abhi").age(22).email("abhinaik@gmail.com").build(),
+                            Student.builder().name("Abhay").age(22).email("abhaynaik@gmail.com").build(),
+                            Student.builder().name("Dev").age(21).email("devnaik@gmail.com").build())
             );
 
         };
