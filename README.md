@@ -9,11 +9,11 @@ End Points:
 
 Base Url  :  /api/v1/students
 
-GET    : /
-POST   : /add            (takes Student in request body)
-PUT    : /update         (takes Student in request body)
-DELETE : /delete         (takes id in request params)
-GET    : /id             (takes id in request params)
+1. GET    : /
+2. POST   : /add            (takes Student in request body)
+3. PUT    : /update         (takes Student in request body)
+4. DELETE : /delete         (takes id in request params)
+5. GET    : /id             (takes id in request params)
 
 
 
