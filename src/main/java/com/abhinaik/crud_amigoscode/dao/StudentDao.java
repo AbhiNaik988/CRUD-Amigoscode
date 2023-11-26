@@ -10,4 +10,8 @@ public interface StudentDao {
     public boolean createStudent(Student student);
 
     public boolean deleteStudent(Integer studentId);
+
+    public Student updateStudent(Student student);
+
+    public Student getStudentById(Integer studentId);
 }

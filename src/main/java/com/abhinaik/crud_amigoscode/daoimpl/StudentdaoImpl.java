@@ -37,4 +37,14 @@ public class StudentdaoImpl implements StudentDao {
         }
         return isStudentExists;
     }
+
+    @Override
+    public Student updateStudent(Student student) {
+        return this.studentRepository.save(student);
+    }
+
+    @Override
+    public Student getStudentById(Integer studentId) {
+        return this.studentRepository.findById(studentId).orElseThrow();
+    }
 }

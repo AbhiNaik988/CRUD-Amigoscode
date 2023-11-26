@@ -28,4 +28,12 @@ public class StudentService {
     public Boolean deleteStudent(Integer id){
         return this.studentDao.deleteStudent(id);
     }
+
+    public Student updateStudent(Student student){
+        return this.studentDao.updateStudent(student);
+    }
+
+    public Student getStudentbyId(Integer id){
+        return this.studentDao.getStudentById(id);
+    }
 }

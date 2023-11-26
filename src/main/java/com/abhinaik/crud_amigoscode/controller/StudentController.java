@@ -34,4 +34,14 @@ public class StudentController {
     public ResponseEntity<Boolean> deleteStudent(@RequestParam Integer id){
         return new ResponseEntity<>(this.studentService.deleteStudent(id),HttpStatus.OK);
     }
+
+    @PutMapping("update")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student){
+        return new ResponseEntity<>(this.studentService.updateStudent(student), HttpStatus.OK);
+    }
+
+    @GetMapping("id")
+    public ResponseEntity<Student> getStudentById(@RequestParam Integer id){
+        return new ResponseEntity<>(this.studentService.getStudentbyId(id),HttpStatus.OK);
+    }
 }
