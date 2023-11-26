@@ -20,4 +20,8 @@ public class StudentService {
     public List<Student> getAllStrudents(){
         return this.studentDao.getAllStudents();
     }
+
+    public Boolean addStudent(Student student){
+        return this.studentDao.createStudent(student);
+    }
 }

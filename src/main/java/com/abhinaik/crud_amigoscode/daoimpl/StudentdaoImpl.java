@@ -22,4 +22,10 @@ public class StudentdaoImpl implements StudentDao {
     public List<Student> getAllStudents() {
         return this.studentRepository.findAll();
     }
+
+    @Override
+    public boolean createStudent(Student student) {
+        Student newStudent = this.studentRepository.save(student);
+        return newStudent != null ? true : false;
+    }
 }
